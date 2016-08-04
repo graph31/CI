@@ -1,0 +1,22 @@
+/* CSS Document */
+
+@font-face {
+    font-family: 'thaisanslite';
+    src: url('../font/thaisanslite_r1.eot');
+    src: url('../font/thaisanslite_r1.eot?#iefix') format('embedded-opentype'),
+         url('../font/thaisanslite.woff') format('woff'),
+         url('../font/thaisanslite_r1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+ font-family: centurygothic;
+ src: url("../font/ufonts.com_century-gothic.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: centurygothic;
+ src: url("../font/ufonts.com_century-gothic.ttf") /* TTF file for CSS3 browsers */
+}
