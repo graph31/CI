@@ -62,7 +62,35 @@
 
                     <tbody>
 
-                
+                    <?php
+
+                    $i=1;
+
+                    foreach ($rs as $r)
+                        {   
+                        if($r['status']==1){
+                            $status = '<span class="status-metro status-active" title="Activated">Activated<span/>';} 
+                        else{
+                            $status='<span class="status-metro status-disabled" title="No Activated">No Activated</span>';} 
+                    ?>
+                        <tr>
+                            <a href="<?php echo base_url();?>admin/photo/editCoat/<?php echo $r['id'];?>">
+                            <td><?php echo $i;?></td>
+                            <td><img id="blah" class="grayscale" src="<?php echo base_url();?>images/news/<?php echo $r['photo'];?>"  ></td>
+                            <!-- <td><?php echo $this->dbhelper->DateThai($r['create_date']);?></td> -->
+                            <td><?php echo $r['title'];?></td>
+                            <td><?php echo $status;?></td>
+                            <td>
+                                
+                                    <span class="fontello-edit"></span>
+                               
+                            </td>
+                             </a>
+                        </tr>
+                    <?php 
+                    $i=$i+1;
+                    }
+                    ?>
                     </tbody>
                 </table>
 

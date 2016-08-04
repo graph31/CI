@@ -4,7 +4,7 @@ class Admin extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		// $this->load->model('news_m','',TRUE);
+		$this->load->model('news_m','',TRUE);
 	}
 	
 	public  function index()
@@ -15,8 +15,8 @@ class Admin extends CI_Controller
 
 	public function newsList()
 	{
-		// $data['rs'] = $this->news_m->getListNews()->result_array();
-		$this->load->view('admin/news/list');
+		$data['rs'] = $this->news_m->getListNews()->result_array();
+		$this->load->view('admin/news/list',$data);
 	}
 		
 		
